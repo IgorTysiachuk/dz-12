@@ -1,0 +1,60 @@
+@keyframes animation {
+    from {
+        background: rgb(0, 78, 10);
+    }
+    
+    20%{
+        background: rgb(0, 255, 55);
+    }
+    25% {
+        background: red;
+    }
+    80% {
+        background: rgb(0, 78, 10);
+    }
+    to {
+        background: rgb(0, 78, 10);
+    }
+}
+.btn1 {
+    background: rgb(0, 78, 10);
+    width: 100px;
+    height: 40px;
+    margin: 20px 0 0 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border: 2px black solid;
+}
+.btn1:hover {
+    animation-name: animation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    
+}
+.loading {
+    width: 5px;
+    height: 5px;
+    border: 3px black dotted;
+    margin-top: 20px;
+    border-radius: 50%;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+body {
+    display: flex;
+    column-gap: 100px;
+}
+@keyframes loading {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(2deg)
+    }
+}
